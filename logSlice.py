@@ -3,10 +3,10 @@
 
 keyWord = []
 
-with open('keyWordAll.txt', 'r') as keyWordAll:
+with open('keyWordAll.txt', 'r', encoding='utf8') as keyWordAll:
 	for line in keyWordAll:
 		keyWord.append(line.strip('\n'))
-with open('waf_audit.log', 'r') as logFile:
+with open('waf_audit.log', 'r', encoding='utf8') as logFile:
 	logFile_read = logFile.read()
 	for num in range(0, len(keyWord)):
 		keyWord_s = keyWord[num]
